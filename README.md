@@ -1,11 +1,10 @@
-<H3>ENTER YOUR NAME</H3>
-<H3>ENTER YOUR REGISTER NO.</H3>
+<H3>ENTER YOUR NAME: LAAKSHIT D</H3>
+<H3>ENTER YOUR REGISTER NO.: 212222230071</H3>
 <H3>EX. NO.1</H3>
 <H3>DATE</H3>
 <H1 ALIGN =CENTER> Introduction to Kaggle and Data preprocessing</H1>
 
 ## AIM:
-
 To perform Data preprocessing in a data set downloaded from Kaggle
 
 ## EQUIPMENTS REQUIRED:
@@ -37,14 +36,57 @@ STEP 5:Normalizing the data<BR>
 STEP 6:Splitting the data into test and train<BR>
 
 ##  PROGRAM:
-TYPE YOUR CODE HERE
+```
+import pandas as pd                                                 
+import io
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.model_selection import train_test_split
 
+df=pd.read_csv("Churn_Modelling.csv",index_col="RowNumber")         
+df.head()
+
+#Find missing values
+df.isnull().sum()
+
+df.duplicated().sum()
+           
+df=df.drop(['Surname', 'Geography','Gender'], axis=1)
+
+scaler=StandardScaler()                                             
+df=pd.DataFrame(scaler.fit_transform(df))
+df.head()
+
+X=df.iloc[:,:-1].values
+Y=df.iloc[:,-1].values                     
+print("X:",X)
+print("Y:",Y)
+        
+Xtrain,Xtest,Ytrain,Ytest = train_test_split(X, Y, test_size=0.2)
+print("Xtrain:" ,Xtrain, "\nXtest:", Xtest)                   # X Train and Test
+print("Ytrain:" ,Ytrain, "\nYtest:", Ytest)                   # Y Train and Test                  
+```
 
 ## OUTPUT:
-SHOW YOUR OUTPUT HERE
+### DATASET:
 
+![image](https://github.com/laakshit-D/Ex-1-NN/assets/119559976/9420e16b-fb32-45f4-b19c-8f1b8e358168)
+
+### NULL VALUES:
+
+![image](https://github.com/laakshit-D/Ex-1-NN/assets/119559976/21cde653-6885-415b-ae33-317809cb941f)
+
+### NORMALIZED DATA:
+
+![image](https://github.com/laakshit-D/Ex-1-NN/assets/119559976/01d1cb64-f84d-4315-ae59-79f0380a5032)
+
+### DATA SPLITTING:
+
+![image](https://github.com/laakshit-D/Ex-1-NN/assets/119559976/e7d8ae29-186a-4ffd-a635-1318b420c7e7)
+
+### TRAIN AND TEST DATA:
+
+![image](https://github.com/laakshit-D/Ex-1-NN/assets/119559976/260489fd-a619-4822-9d24-b5e78343c31f)
 
 ## RESULT:
 Thus, Implementation of Data Preprocessing is done in python  using a data set downloaded from Kaggle.
-
-
