@@ -1,5 +1,3 @@
-<H3>ENTER YOUR NAME: LAAKSHIT D</H3>
-<H3>ENTER YOUR REGISTER NO.: 212222230071</H3>
 <H3>EX. NO.1</H3>
 <H3>DATE: </H3>
 <H1 ALIGN =CENTER> Introduction to Kaggle and Data preprocessing</H1>
@@ -36,6 +34,10 @@ STEP 5:Normalizing the data<BR>
 STEP 6:Splitting the data into test and train<BR>
 
 ##  PROGRAM:
+
+#### ENTER YOUR NAME: LAAKSHIT D
+#### ENTER YOUR REGISTER NO.: 212222230071
+
 ```py
 import pandas as pd                                                 
 import io
