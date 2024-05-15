@@ -35,8 +35,8 @@ STEP 6:Splitting the data into test and train<BR>
 
 ##  PROGRAM:
 
-#### ENTER YOUR NAME: LAAKSHIT D
-#### ENTER YOUR REGISTER NO.: 212222230071
+#### NAME: LAAKSHIT D
+#### REGISTER NO.: 212222230071
 
 ```py
 import pandas as pd                                                 
